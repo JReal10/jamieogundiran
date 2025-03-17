@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Chatbot</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <link rel="stylesheet" href="/styles/projects.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <main class="home-container">
+        <elevenlabs-convai agent-id="KVCfODyNQI1IwSpeeXwq"></elevenlabs-convai>
+        <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+        <section class="intro-section">
+            <div class="intro-content">
+                <h1><span class="highlight">Welcome.</span></h1>
+                <p class="intro-text">
+                    I'm <span class = "orange-highlight">Jamie Ogundiran</span>, an <span class="orange-highlight">AI Engineer</span> with a deep passion for leveraging AI to tackle real-world challenges. Based in <span class="orange-highlight">London</span> with roots in Japan, I have experience designing and building applications that address user and business needs. Take a look at my projects or chat with my <span class="orange-highlight">AI-powered voice chat</span> to discover more.
+                  </p>
+                  
+                <div class="cta-buttons">
+                    <a href="/static/about.html" class="btn secondary-btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- New Projects Section Beneath the Introduction -->
+        <section class="projects-section">
+            <h2>Projects.</h2>
+            <div class="projects-grid" id="projects-grid">
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="/static/assets/images/sentiment.jpg" alt="Reddit Stock Sentiment Analyzer">
+                    </div>
+                    <div class="project-content">
+                        <h3 class = "project-heading">Reddit Stock Sentiment Analyzer</h3>
+                        <p>Analyzes Reddit stock discussions to provide real-time sentiment insights using NLP and transformers.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/JReal10/Reddit-Stock-Sentiment-Analyzer" target="_blank" class="project-link">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="/static/assets/images/house.png" alt="London Borough Recommender">
+                    </div>
+                    <div class="project-content">
+                        <h3 class = "project-heading">London Borough Recommender</h3>
+                        <p>Recommends London boroughs based on user preferences and socio-economic data, using machine learning and geospatial analysis</p>
+                        <div class="project-links">
+                            <a href="https://github.com/JReal10/London-Area-Recommender-System" target="_blank" class="project-link">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="/static/assets/images/sharon.png" alt="E-commerce Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3 class = "project-heading">Sharon - Salon booking app</h3>
+                        <p>A mobile application for salon appointment booking, featuring real-time scheduling and salon dashboards</p>
+                        <div class="project-links">
+                            <a href="https://github.com/JReal10/Sharon---Salon-booking-app" target="_blank" class="project-link">View Details</a>
+                            <!--<a href="#" class="project-link view-details" data-project-id="ecommerce-platform">View Details</a>-->
+                        </div>
+                    </div>
+                </div>
+    
+                
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="/static/assets/images/parenting.png" alt="E-commerce Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3 class = "project-heading">ParentLink - parenting app</h3>
+                        <p>parenting app focusing on partner engagement, community building, and expert-backed guidance for all developmental stages.</p>
+                        <div class="project-links">
+                            <a href="https://www.figma.com/community/file/1322990644569239714" target="_blank" class="project-link">View Details</a>
+                            <!--<a href="#" class="project-link view-details" data-project-id="ecommerce-platform">View Details</a>-->
+                        </div>
+                    </div>
+                </div>
+                <!-- You can add additional project cards here -->
+            </div>
+        </section>
+
+        <div class="divider"></div>
+        <section class="projects-section">
+          <h2>Research.</h2>
+          <div class="research-grid">
+            <div class="project-card" data-category="web">
+              <div class="project-image">
+                <img src="/assets/images/culture_llm.png" alt="E-commerce Platform">
+              </div>
+              <div class="project-content">
+                <h3 class = "project-heading">Culturally aligned LLM for low-resource African languages</h3>
+                <p>This research focuses on improving culturally aligned Large Language Models (LLMs) for low-resource African languages. The goal is to develop scalable data collection methods and create benchmarks for better model evaluation.</p>
+                <div class="project-links">
+                  <a href="https://github.com/JReal10/AfricaLLM" target="_blank" class="project-link">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+          
+
+        <!-- Commented-out Chatbot Section -->
+        <!--
+        <section class="chatbot-section">
+            <h2>Ask Me Anything</h2>
+            <p>Chat with my AI assistant to learn more about my skills, experience, and projects.</p>
+            <div class="chat-container">
+                <div class="chat-history" id="chat-history"></div>
+                <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="Ask a question...">
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+        </section>
+        -->
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/navigation.js"></script>
+</body>
+</html>

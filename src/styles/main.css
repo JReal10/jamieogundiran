@@ -1,0 +1,240 @@
+/* Base Styles */
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-slate: #999999;
+  --color-midnight: #111111;
+  --color-rich-black: #333333;
+  --color-granite: #666666;
+  --color-tan: #E0E0DB;
+  --color-peach: #F3EEE8;
+  --color-ash: #F1F1F1;
+  
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --default-font: var(--font-family-primary);
+  
+  --primary-color: var(--color-midnight);
+  --secondary-color: var(--color-rich-black);
+  --accent-color: var(--color-granite);
+  --text-color: var(--color-rich-black);
+  --light-text: var(--color-slate);
+  --bg-color: var(--color-tan);
+  --light-bg: var(--color-peach);
+  --border-color: var(--color-slate);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--default-font);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-midnight);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-granite);
+}
+
+/* Adjust vertical spacing for header tags */
+h1, h2, h3, h4, h5, h6 {
+  margin: 3rem 0 5rem 0; /* Top margin 3rem, Bottom margin 5rem */
+  line-height: 1.3;
+  color: var(--color-midnight);
+  font-family: var(--default-font);
+  font-weight: 400;
+}
+
+.divider {
+  width: 100%;                /* Full width divider */
+  height: 1px;                /* Thickness of the divider */
+  background-color: var(--color-slate); /* Divider color */
+  margin: 3rem 0;             /* Vertical spacing around the divider */
+}
+
+
+/* Enlarge the site header for greater impact */
+.site-header {
+  background-color: var(--bg-color);
+  padding: 3rem 2rem;  /* Increased vertical padding for a bigger header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: -0.015em;
+  font-weight:500;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  font-family: var(--default-font);
+  letter-spacing: 0.01em;
+}
+
+.primary-btn {
+  background-color: var(--color-midnight); /* Dark background */
+  color: var(--color-white); /* White text for contrast */
+}
+
+.primary-btn:hover {
+  background-color: var(--color-rich-black); /* Slightly lighter dark on hover */
+  color: var(--color-white); /* White text for high contrast */
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid var(--color-midnight);
+  color: var(--color-midnight);
+}
+
+.secondary-btn:hover {
+  background-color: var(--color-midnight); /* Dark background on hover */
+  color: var(--color-white); /* White text for high contrast */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+main {
+  min-height: calc(100vh - 160px); /* Account for header and footer */
+  padding: 2rem 0;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+.orange-highlight {
+  color: #E67E22;    /* Orange shade that complements your background */
+  font-weight: bold;
+  padding: 0 0.2rem;
+  border-radius: 3px;
+}
+
+
+.logo a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-midnight);
+  font-family: var(--default-font);
+  letter-spacing: -0.02em;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left: 2rem;
+}
+
+.main-nav a {
+  font-size: 1.2rem;
+  color: var(--color-rich-black);
+  font-weight: 400;
+  font-family: var(--default-font);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--color-midnight);
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: var(--bg-color);
+  color: var(--color-granite);
+  padding: 2rem;
+  text-align: center;
+  font-family: var(--default-font);
+  font-size: 0.9rem;
+}
+
+.social-links {
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  color: var(--color-granite);
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.social-links a:hover {
+  color: var(--color-midnight);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+  }
+  
+  .site-header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .logo {
+    margin-bottom: 1rem;
+  }
+  
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .main-nav li {
+    margin: 0.5rem;
+  }
+}

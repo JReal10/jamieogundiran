@@ -1,0 +1,156 @@
+/* About Page Styles */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.about-hero {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+  gap: 3rem;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
+
+.about-title {
+  flex: 1;
+  align-self: flex-start; /* Aligns the image to the top */
+}
+
+.about-intro {
+  flex: 2;
+}
+
+.about-intro h1 {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-size: 2.5rem;
+}
+
+.about-intro .tagline {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.about-intro .bio {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+/* Skills Section Container */
+.skills-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+  gap: 3rem;
+}
+
+/* Main Heading */
+.skills-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Grid Container for Skill Categories */
+.skills-grid {
+  display: grid;
+  gap: 2rem;
+  flex: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr); /* 4 equal columns */
+  grid-template-rows: repeat(1, auto);   /* 4 rows that adjust to content */
+}
+
+/* Individual Skill Category Card */
+.skill-category {
+  padding: 1rem;
+}
+
+/* Category Heading */
+.skill-category h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Skills List */
+.skill-category ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+/* Individual Skill Item */
+.skill-category ul li {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-image {
+    margin-bottom: 2rem;
+  }
+  
+  .about-image img {
+    max-width: 250px;
+  }
+  
+  .skills-section h2:after,
+  .experience-section h2:after,
+  .education-section h2:after,
+  .personal-section h2:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .skills-section h2,
+  .experience-section h2,
+  .education-section h2,
+  .personal-section h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+  }
+  
+  .skill-category {
+    width: 100%;
+  }
+  
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-content:before {
+    left: -2rem;
+  }
+}
