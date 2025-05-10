@@ -1,0 +1,40 @@
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.intro-content {
+  flex: 1;
+}
+
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+}
+
+.cta-buttons .btn {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+  .intro-section {
+    flex-direction: column-reverse;
+  }
+  
+  .intro-image img {
+    max-width: 80%;
+    margin-bottom: 2rem;
+  }
+}

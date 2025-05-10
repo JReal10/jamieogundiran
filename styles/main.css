@@ -1,5 +1,10 @@
-/* Base Styles */
+/* 
+========================
+VARIABLES & ROOT SETTINGS
+========================
+*/
 :root {
+  /* Color Variables */
   --color-white: #fff;
   --color-black: #000;
   --color-slate: #999999;
@@ -9,10 +14,14 @@
   --color-tan: #E0E0DB;
   --color-peach: #F3EEE8;
   --color-ash: #F1F1F1;
-  
+  --color-orange: #ff8c00;
+  --color-orange-dark: #e07b00;
+
+  /* Font Variables */
   --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --default-font: var(--font-family-primary);
-  
+
+  /* Theme Variables */
   --primary-color: var(--color-midnight);
   --secondary-color: var(--color-rich-black);
   --accent-color: var(--color-granite);
@@ -24,6 +33,11 @@
   --transition: all 0.3s ease;
 }
 
+/* 
+========================
+BASE STYLES
+========================
+*/
 * {
   margin: 0;
   padding: 0;
@@ -37,8 +51,27 @@ body {
   background-color: var(--bg-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  /* overflow: hidden; */
+  flex-direction: column;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Typography */
 a {
   text-decoration: none;
   color: var(--color-midnight);
@@ -49,36 +82,17 @@ a:hover {
   color: var(--color-granite);
 }
 
-/* Adjust vertical spacing for header tags */
 h1, h2, h3, h4, h5, h6 {
-  margin: 3rem 0 5rem 0; /* Top margin 3rem, Bottom margin 5rem */
   line-height: 1.3;
   color: var(--color-midnight);
   font-family: var(--default-font);
   font-weight: 400;
 }
 
-.divider {
-  width: 100%;                /* Full width divider */
-  height: 1px;                /* Thickness of the divider */
-  background-color: var(--color-slate); /* Divider color */
-  margin: 3rem 0;             /* Vertical spacing around the divider */
-}
-
-
-/* Enlarge the site header for greater impact */
-.site-header {
-  background-color: var(--bg-color);
-  padding: 3rem 2rem;  /* Increased vertical padding for a bigger header */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
 h1 {
-  font-size: 3.5rem;
-  letter-spacing: -0.025em;
+  font-size: 5.5rem;
+  font-weight: 600;
+  line-height: 1; /* Decreases the gap between lines */
 }
 
 h2 {
@@ -86,17 +100,164 @@ h2 {
   letter-spacing: -0.025em;
 }
 
-h3 {
-  font-size: 1.5rem;
-  letter-spacing: -0.015em;
-  font-weight:500;
+/* Utility Classes */
+.orange-highlight {
+  color: #E67E22;    /* Orange shade that complements your background */
+  font-weight: bold;
+  padding: 0 0.2rem;
+  border-radius: 3px;
 }
 
-p {
+/* 
+========================
+LAYOUT & CONTAINERS
+========================
+*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.layout-container {
+  max-width: 1200px; /* Adjust to your desired max width */
+  display: flex;
+  margin:0 auto;
+}
+
+main {
+  min-height: calc(100vh - 160px); /* Account for header and footer */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  width: calc(100% - 400px);
+  padding: 2rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* 
+========================
+SIDEBAR STYLES
+========================
+*/
+.sidebar {
+  width:400px;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;               /* sticks to the top of the viewport */
+  align-self: flex-start; /* ensure it doesn’t stretch in a flex column layout */
+  height: 100vh;        /* fill the viewport height */
+  overflow-y: auto;     /* if the sidebar content itself overflows */
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.profile {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 10px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+  text-align: center; /* Centers all text and inline elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers block elements horizontally */
+}
+
+.sidebar-image {
+  width: 240px;
+  height: 300px;
+  border-radius: 10px; /* For circular image */
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--color-rich-black);
+}
+
+.profile-bio {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: var(--color-granite);
+}
+
+.sidebar.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* 
+========================
+SOCIAL MEDIA STYLES
+========================
+*/
+.social-media-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Spacing between icons */
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.social-icon i {
+  font-size: 20px;
+  color: var(--color-granite);
+}
+
+.social-icon:hover i {
+  color: var(--color-rich-black);
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  background-color: var(--color-ash);
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-links {
   margin-bottom: 1rem;
 }
 
-/* Button Styles */
+.social-links a {
+  color: var(--color-granite);
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.social-links a:hover {
+  color: var(--color-midnight);
+}
+
+/* 
+========================
+BUTTON STYLES
+========================
+*/
 .btn {
   display: inline-block;
   padding: 0.8rem 1.6rem;
@@ -132,61 +293,179 @@ p {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Layout */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+/* Feature Buttons */
+.button-container {
+  display: flex;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
 }
 
-main {
-  min-height: calc(100vh - 160px); /* Account for header and footer */
-  padding: 2rem 0;
+.feature-button {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 300px;
+  height: 200px;
+  border-radius: 16px;
+  padding: 30px;
+  text-decoration: none;
+  color: var(--color-white);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-section {
-  margin-bottom: 4rem;
+.feature-button:hover {
+  transform: translateY(-5px);
 }
 
-.orange-highlight {
-  color: #E67E22;    /* Orange shade that complements your background */
-  font-weight: bold;
-  padding: 0 0.2rem;
-  border-radius: 3px;
+.button-content {
+  display: flex;
+  flex-direction: column;
 }
 
 
-.logo a {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--color-midnight);
-  font-family: var(--default-font);
-  letter-spacing: -0.02em;
+.icon-container {
+  width: 40px;
+  height: 40px;
+}
+
+.text-container h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--color-ash);
+}
+
+.arrow-container {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+
+/* 
+========================
+HEADER & NAVIGATION
+========================
+*/
+.site-header {
+  background-color: var(--bg-color);
+  padding: 3rem 2rem;  /* Increased vertical padding for a bigger header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
 }
 
 .main-nav ul {
   display: flex;
   list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-tan); /* accent-colored bg */
+  border-radius: 8px;
+  border: 2px solid transparent;       /* border that will animate */
+  transition: border-color 0.3s ease;
 }
 
-.main-nav li {
-  margin-left: 2rem;
+.nav-icon {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem;                     /* add padding */
 }
 
-.main-nav a {
+/* keep the glyph itself neutral */
+.nav-icon i {
   font-size: 1.2rem;
-  color: var(--color-rich-black);
-  font-weight: 400;
-  font-family: var(--default-font);
+  color: var(--text-color);
+  display: block;
+  transition: border-color 0.3s ease;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-  color: var(--color-midnight);
+/* on hover, animate the outline */
+
+/* pull label out of flow & set up initial transform */
+.nav-label {
+  position: absolute;
+  bottom: -1.6rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px) scale(0.8);
+  white-space: nowrap;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-/* Footer Styles */
+/* fade & scale label into view */
+.nav-icon:hover .nav-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+
+/* 
+========================
+SECTION SPACING
+========================
+*/
+section {
+  margin-bottom: 100px; /* Adjust this value to control the amount of spacing */
+}
+
+section .button-container {
+  margin-top: 30px; /* Adjust this value as needed */
+}
+
+section h1{
+  margin-bottom: 40px;
+}
+
+/* More specific spacing control for each section type */
+.intro-section {
+  margin-bottom: 120px;
+  gap: 10px;
+}
+
+.projects-section {
+  margin-bottom: 120px;
+}
+
+.achievements-section {
+  margin-bottom: 120px;
+}
+
+.research-section {
+  margin-bottom: 120px;
+}
+
+.techstack-section {
+  margin-bottom: 120px;
+}
+
+.contact-section {
+  margin-bottom: 80px; /* Slightly less space at the bottom */
+}
+
+/* 
+========================
+FOOTER STYLES
+========================
+*/
 .site-footer {
   background-color: var(--bg-color);
   color: var(--color-granite);
@@ -196,21 +475,11 @@ section {
   font-size: 0.9rem;
 }
 
-.social-links {
-  margin-bottom: 1rem;
-}
-
-.social-links a {
-  color: var(--color-granite);
-  margin: 0 0.5rem;
-  font-size: 1.2rem;
-}
-
-.social-links a:hover {
-  color: var(--color-midnight);
-}
-
-/* Responsive Design */
+/* 
+========================
+MEDIA QUERIES
+========================
+*/
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -223,10 +492,7 @@ section {
   .site-header {
     flex-direction: column;
     padding: 1rem;
-  }
-  
-  .logo {
-    margin-bottom: 1rem;
+
   }
   
   .main-nav ul {
@@ -237,4 +503,218 @@ section {
   .main-nav li {
     margin: 0.5rem;
   }
+}
+
+/* ========================================
+   RESPONSIVE LAYOUT ADJUSTMENTS
+   ======================================== */
+
+/* Tablet and below: stack sidebar above content */
+@media (max-width: 1024px) {
+  .layout-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    position: relative;      /* disable sticky on smaller screens */
+    top: auto;
+    height: auto;
+    padding-bottom: 1rem;     /* give some breathing room */
+  }
+  .content-wrapper {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile: further tweak typography & spacing */
+@media (max-width: 768px) {
+  /* Sidebar → full-width header above main <h1> */
+  .sidebar {
+    order: -1;                /* move sidebar to the top of the column */
+    padding: 1rem;
+  }
+
+  /* Scale headings for small screens */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Tweak profile card inside sidebar */
+  .profile {
+    padding: 1.5rem;
+  }
+  .sidebar-image {
+    width: 180px;
+    height: 220px;
+  }
+}
+
+/* Extra-small phones: optimize form rows & buttons */
+@media (max-width: 480px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .feature-button {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .button-container {
+    gap: 10px;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* GitHub Button Styling */
+.github-button {
+  background-color: linear-gradient(135deg, var(--color-black) 0%, var(--color-rich-black) 100%); /* GitHub dark background color */
+  color: var(--color-white);
+  position: relative;
+}
+
+.github-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* GitHub button decoration pattern */
+.github-button::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 180px;
+  height: 180px;
+  background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M45,90 C45,108.5 58.5,124 75,124 C91.5,124 105,108.5 105,90 C105,71.5 91.5,56 75,56 C58.5,56 45,71.5 45,90 Z' stroke='rgba(110, 84, 148, 0.15)' stroke-width='3' fill='none'/%3E%3Cpath d='M75,56 C75,28 95,14 135,14' stroke='rgba(110, 84, 148, 0.15)' stroke-width='3' fill='none'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-card {
+  border-top: 1px solid var(--color-rich-black);
+  padding-top: 2rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateX(10px);
+}
+
+.company {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover .arrow {
+  transform: translate(5px, -5px);
+  color: var(--color-orange);
+}
+
+.description {
+  color: var(--color-granite);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  max-width: 80%;
+}
+
+.period {
+  color: var(--color-slate);
+  font-size: 0.9rem;
+}
+
+
+/* Optional: Add the GitHub icon color */
+.github-button .icon-container svg {
+  color: var(--color-white); /* GitHub purple accent color */
+}
+
+/* Optional: Style the arrow with GitHub colors */
+.github-button .arrow-container {
+  border-color: var(--color-white);
+}
+
+/* Optional: Add a subtle gradient overlay */
+.github-button {
+  background: linear-gradient(135deg, #171515 0%, #24292e 100%);
+}
+
+/* --- Row layout for name + email --- */
+.form-row {
+  display: flex;
+  gap: 1rem;            /* space between the two fields */
+  flex-wrap: wrap;      /* stack on narrow screens */
+}
+
+.form-row .form-group {
+  flex: 1;              /* each takes equal width */
+  min-width: 200px;     /* so they don’t shrink too small */
+}
+
+/* --- Smaller labels --- */
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;    /* make the title smaller */
+  font-weight: bold;
+}
+
+/* --- Inputs & textarea placeholders inherit width --- */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-ash);
+  border-radius: 4px;
+}
+
+/* --- Make the textarea expandable vertically --- */
+.form-group textarea {
+  resize: vertical;     /* user can drag to resize up/down */
+  min-height: 120px;    /* starting height */
+  max-height: 400px;    /* optional cap */
+}
+
+/* --- Full-width submit button --- */
+.submit-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;     /* separate it from the textarea */
+}
+
+.submit-button:hover {
+  background-color: var(--color-orange-dark);
 }

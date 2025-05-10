@@ -3,177 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Jamie Ogundiran</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">   
 </head>
-<body>
-    <div id="header-container"></div>
+  <!-- in your <head>, if you haven’t already -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     
-    <main class="projects-container">
-        <elevenlabs-convai agent-id="KVCfODyNQI1IwSpeeXwq"></elevenlabs-convai>
-        <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
-        <h1><span class="highlight">Projects.</span></h1>
-
-        <section class="projects-intro">
-        </section>
-        
-        <section class="projects-grid" id="projects-grid">
-            <!-- Example of a static project card: -->
-            <div class="project-card" data-category="ai">
-                <div class="project-image">
-                    <img src="images/table42.jpeg" alt="Portfolio Chatbot">
-                </div>
-                <div class="project-content">
-                    <h3>Table 42 (Table for two)</h3>
-                    <p>AI-Powered Customer Service & CRM Platform for Restaurants and Cafes</p>
-                    <div class="tech-stack">
-                        <span>FASTAPI</span>
-                        <span>Python</span>
-                        <span>Openai</span>
-                        <span>ACI.DEV</span>
-                        <span>Meta Graph API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/JReal10/Table42" target="_blank" class="project-link">View Details</a>
-                        <!--<a href="#" class="project-link view-details" data-project-id="portfolio-chatbot">View Details</a>-->
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-category="ai">
-                <div class="project-image">
-                    <img src="images/sntc.jpeg" alt="Say NO TO CORRUPTION">
-                </div>
-                <div class="project-content">
-                    <h3>SNTC (Say NO TO CORRUPTION)</h3>
-                    <p>AI-powered compliance monitoring and supplier intelligence</p>
-                    <div class="tech-stack">
-                        <span>FASTAPI</span>
-                        <span>Python</span>
-                        <span>Portia</span>
-                        <span>Javascript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/JReal10/say_no_to_corruption" target="_blank" class="project-link">View Details</a>
-                        <!--<a href="#" class="project-link view-details" data-project-id="portfolio-chatbot">View Details</a>-->
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-category="ai">
-                <div class="project-image">
-                    <img src="images/sentiment.jpg" alt="Portfolio Chatbot">
-                </div>
-                <div class="project-content">
-                    <h3>RedditRadar: Stock Sentiment Analyzer</h3>
-                    <p>Analyzes Reddit stock discussions to provide real-time sentiment insights using Natural Language Processing.</p>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>Streamlit</span>
-                        <span>Transformers</span>
-                        <span>Pandas & Numpy</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/JReal10/Reddit-Stock-Sentiment-Analyzer" target="_blank" class="project-link">View Details</a>
-                        <!--<a href="#" class="project-link view-details" data-project-id="portfolio-chatbot">View Details</a>-->
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card" data-category="web">
-                <div class="project-image">
-                    <img src="images/house.png" alt="E-commerce Platform">
-                </div>
-                <div class="project-content">
-                    <h3>BoroughMatch London</h3>
-                    <p>Recommends London boroughs based on user preferences and socio-economic data, using machine learning and geospatial analysis</p>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>Streamlit</span>
-                        <span>Scikit-learn</span>
-                        <span>Matplotlib & Seaborn</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/JReal10/London-Area-Recommender-System" target="_blank" class="project-link">View Details</a>
-                        <!--<a href="#" class="project-link view-details" data-project-id="ecommerce-platform">View Details</a>-->
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="web">
-                <div class="project-image">
-                    <img src="images/sharon.png" alt="E-commerce Platform">
-                </div>
-                <div class="project-content">
-                    <h3>Sharon - Salon booking app</h3>
-                    <p>A mobile application for salon appointment booking, featuring real-time scheduling and salon dashboards</p>
-                    <div class="tech-stack">
-                        <span>React Native</span>
-                        <span>Firebase</span>
-                        <span>Node.js</span>
-                        <span>Figma</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/JReal10/Sharon---Salon-booking-app" target="_blank" class="project-link">View Details</a>
-                        <!--<a href="#" class="project-link view-details" data-project-id="ecommerce-platform">View Details</a>-->
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="project-card" data-category="web">
-                <div class="project-image">
-                    <img src="images/parenting.png" alt="E-commerce Platform">
-                </div>
-                <div class="project-content">
-                    <h3>ParentLink - parenting app</h3>
-                    <p>parenting app focusing on partner engagement, community building, and expert-backed guidance for all developmental stages.</p>
-                    <div class="tech-stack">
-                        <span>Figma (UI/UX Design)</span>
-                        <span>User Research</span>
-                        <span>Prototyping</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://www.figma.com/community/file/1322990644569239714" target="_blank" class="project-link">View Details</a>
-                        <!--<a href="#" class="project-link view-details" data-project-id="ecommerce-platform">View Details</a>-->
-                    </div>
-                </div>
-            </div>
-            <!-- Add more project cards based on your projects.json data -->
-        </section>
-
-        <div class="divider"></div>
-        <section class="projects-section">
-            <h2>Research.</h2>
-            <div class="research-grid">
-              <div class="project-card" data-category="web">
-                <div class="project-image">
-                  <img src="images/culture_llm.png" alt="E-commerce Platform">
-                </div>
-                <div class="project-content">
-                  <h3 class = "project-heading">Culturally aligned LLM for low-resource African languages</h3>
-                  <p>This research focuses on improving culturally aligned Large Language Models (LLMs) for low-resource African languages. The goal is to develop scalable data collection methods and create benchmarks for better model evaluation.</p>
-                  <div class="project-links">
-                    <a href="https://github.com/JReal10/AfricaLLM" target="_blank" class="project-link">View Details</a>
+    <header class="site-header">
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <a href="index.html" class="nav-icon">
+            <i class="fa-solid fa-house"></i>
+            <span class="nav-label">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="projects.html" class="nav-icon">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span class="nav-label">Projects</span>
+          </a>
+        </li>
+        <li>
+          <a href="research.html" class="nav-icon">
+            <i class="fa-solid fa-book"></i>
+            <span class="nav-label">Research</span>
+          </a>
+        </li>
+        <li>
+          <a href="achievements.html" class="nav-icon">
+            <i class="fa-solid fa-trophy"></i>
+            <span class="nav-label">Achievements</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    </header>
+    
+        <div class = "layout-container">
+        <div class = "sidebar fade-in">
+            <div class="profile">
+                <img src="images/jamieo.png" alt="Jamie Ogundiran" class="sidebar-image">
+                <h2 class="sidebar-name">Jamie Ogundiran</h2>
+                <p class="profile-bio">Building Artificial Intelligent systems with human-centered design
+                </p>
+                <div class="social-media-container">
+                    <a href="https://linkedin.com/in/yourprofile" class="social-icon" aria-label="LinkedIn">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/yourusername" class="social-icon" aria-label="GitHub">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:jamieogundiran@gmail.com" class="social-icon" aria-label="Email">
+                      <i class="fas fa-envelope"></i>
+                    </a>
                   </div>
+              </div>
+        </div>
+        <div class = "content-wrapper">   
+            <!-- New Projects Section Beneath the Introduction -->
+            <section class="projects-section fade-in">
+                <h1> <span class = "orange-highlight">RECENT</span> <br>PROJECTS</h1>
+                <div class="projects-grid" id="projects-grid">
+                    <div class="project-card" data-category="ai">
+                        <div class="project-image">
+                            <img src="images/table42.jpeg" alt="Portfolio Chatbot">
+                        </div>
+                        <div class="project-content">
+                            <h3 class = "project-heading">Table 42</h3>
+                            <p>AI-Powered Customer Service & CRM Platform for Restaurants and Cafes</p>
+                            <div class="project-links">
+                                <a href="https://github.com/JReal10/Table42" target="_blank" class="project-link">View Details</a>
+                                <!--<a href="#" class="project-link view-details" data-project-id="portfolio-chatbot">View Details</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="ai">
+                        <div class="project-image">
+                            <img src="images/sntc.jpeg" alt="Say NO TO CORRUPTION">
+                        </div>
+                        <div class="project-content">
+                            <h3 class = "project-heading" >SNTC</h3>
+                            <p>AI-powered compliance monitoring and supplier intelligence</p>
+                            <div class="project-links">
+                                <a href="https://github.com/JReal10/say_no_to_corruption" target="_blank" class="project-link">View Details</a>
+                                <!--<a href="#" class="project-link view-details" data-project-id="portfolio-chatbot">View Details</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="ai">
+                        <div class="project-image">
+                            <img src="images/sentiment.jpg" alt="Reddit Stock Sentiment Analyzer">
+                        </div>
+                        <div class="project-content">
+                            <h3 class = "project-heading">RedditRadar</h3>
+                            <p>Reddit stock discussions sentiment analyzer for financial institution</p>
+                            <div class="project-links">
+                                <a href="https://github.com/JReal10/Reddit-Stock-Sentiment-Analyzer" target="_blank" class="project-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="images/house.png" alt="London Borough Recommender">
+                        </div>
+                        <div class="project-content">
+                            <h3 class = "project-heading">BoroughMatch London</h3>
+                            <p>AI-powered London Borough Recommender for optimizing resident experience and local service access.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/JReal10/London-Area-Recommender-System" target="_blank" class="project-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="images/sharon.png" alt="E-commerce Platform">
+                        </div>
+                        <div class="project-content">
+                            <h3 class = "project-heading">Sharon</h3>
+                            <p>A mobile application for salon appointment booking, featuring real-time scheduling and salon dashboards</p>
+                            <div class="project-links">
+                                <a href="https://github.com/JReal10/Sharon---Salon-booking-app" target="_blank" class="project-link">View Details</a>
+                                <!--<a href="#" class="project-link view-details" data-project-id="ecommerce-platform">View Details</a>-->
+                            </div>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="images/parenting.png" alt="E-commerce Platform">
+                        </div>
+                        <div class="project-content">
+                            <h3 class = "project-heading">ParentLink</h3>
+                            <p>parenting app focusing on partner engagement, community building, and expert-backed guidance for all developmental stages.</p>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/community/file/1322990644569239714" target="_blank" class="project-link">View Details</a>
+                                <!--<a href="#" class="project-link view-details" data-project-id="ecommerce-platform">View Details</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- You can add additional project cards here -->
+                </div>
+            </section>
+            <section class="contact-section">
+              <h1><span class="orange-highlight">LET'S</span><br>CONNECT</h1>
+              <form action="https://formsubmit.co/Jamieogundiran@gmail.com" method="POST" class="contact-form fade-in">
+                <!-- Protect from bots -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">  <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                  />
                 </div>
               </div>
-            </div>
-          </section>
-        
-        <!-- Project Details Modal -->
-        <div id="project-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <div id="modal-body">
-                    <!-- Project details will be loaded here -->
-                </div>
-            </div>
-        </div>
-    </main>
+  
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Type your message here…"
+                  required
+                ></textarea>
+              </div>
+  
+              <button type="submit" class="submit-button">Send Message</button>
+            </form>
+            </section>
+    </div>
+    </div>
     
-    <div id="footer-container"></div>
-
-    <script src="js/navigation.js"></script>
-    <!--<script src="/static/js/projects.js"></script> -->
-</body>
+        <div id="footer-container"></div>
+    
+        <script src="js/app.js"></script>
+        <script src="js/navigation.js"></script>
+    </body>
 </html>

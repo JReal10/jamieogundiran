@@ -3,41 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Chatbot</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/chatbot.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div id="header-container"></div>
-    <main class="home-container">
-        <elevenlabs-convai agent-id="KVCfODyNQI1IwSpeeXwq"></elevenlabs-convai>
-        <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
-        <section class="intro-section">
+  <!-- in your <head>, if you haven’t already -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+<header class="site-header">
+<nav class="main-nav">
+  <ul>
+    <li>
+      <a href="index.html" class="nav-icon">
+        <i class="fa-solid fa-house"></i>
+        <span class="nav-label">Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="projects.html" class="nav-icon">
+        <i class="fa-solid fa-diagram-project"></i>
+        <span class="nav-label">Projects</span>
+      </a>
+    </li>
+    <li>
+      <a href="research.html" class="nav-icon">
+        <i class="fa-solid fa-book"></i>
+        <span class="nav-label">Research</span>
+      </a>
+    </li>
+    <li>
+      <a href="achievements.html" class="nav-icon">
+        <i class="fa-solid fa-trophy"></i>
+        <span class="nav-label">Achievements</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</header>
+
+    <div class = "layout-container">
+    <div class = "sidebar fade-in">
+        <div class="profile">
+            <img src="images/jamieo.png" alt="Jamie Ogundiran" class="sidebar-image">
+            <h2 class="sidebar-name">Jamie Ogundiran</h2>
+            <p class="profile-bio">Building Artificial Intelligent systems with human-centered design
+            </p>
+            <div class="social-media-container">
+                <a href="https://linkedin.com/in/yourprofile" class="social-icon" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/yourusername" class="social-icon" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:jamieogundiran@gmail.com" class="social-icon" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+          </div>
+    </div>
+    <div class = "content-wrapper">   
+        <section class="intro-section fade-in">
             <div class="intro-content">
-                <h1><span class="highlight">Welcome.</span></h1>
+                <h1> <span class = "orange-highlight">ARTIFICIAL INTELLIGENCE</span> ENGINEER</h1>
                 <p class="intro-text">
-                    I'm <span class = "orange-highlight">Jamie Ogundiran</span>, an <span class="orange-highlight">AI Engineer</span> with a deep passion for leveraging AI to tackle real-world challenges. Based in <span class="orange-highlight">London</span> with roots in Japan, I have experience designing and building applications that address user and business needs. Take a look at my projects or chat with my <span class="orange-highlight">AI-powered voice chat</span> to discover more.
-                  </p>
-                  
-                <div class="cta-buttons">
-                    <a href="about.html" class="btn secondary-btn">Learn More</a>
-                </div>
-            </div>
+                  Based in London and currently studying Artificial Intelligence at King’s College London, I specialize in developing AI-driven software that solves real-world problem. With hands-on experience in building AI agents, machine learning models, and user-centric applications—both personal and client-based—I bring a hybrid skill set that bridges engineering and design to deliver real-world solutions.</p>
+                  <div class="button-container">
+                    <!-- GitHub Button with GitHub colors -->
+                    <a href="https://github.com/JReal10" class="feature-button github-button">
+                      <div class="button-content">
+                        <div class="icon-container">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                          </svg>
+                        </div>
+                        <div class="text-container">
+                          <h3>GITHUB PROJECTS,<br>CODE REPOSITORIES</h3>
+                        </div>
+                      </div>
+                      <div class="arrow-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                          <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
         </section>
 
-        <div class="divider"></div>
-
         <!-- New Projects Section Beneath the Introduction -->
-        <section class="projects-section">
-            <h2>Projects.</h2>
+        <section class="projects-section fade-in">
+            <h1> <span class = "orange-highlight">RECENT</span> <br>PROJECTS</h1>
             <div class="projects-grid" id="projects-grid">
                 <div class="project-card" data-category="ai">
                     <div class="project-image">
                         <img src="images/table42.jpeg" alt="Portfolio Chatbot">
                     </div>
                     <div class="project-content">
-                        <h3>Table 42 (Table for two)</h3>
+                        <h3 class = "project-heading">Table 42</h3>
                         <p>AI-Powered Customer Service & CRM Platform for Restaurants and Cafes</p>
                         <div class="project-links">
                             <a href="https://github.com/JReal10/Table42" target="_blank" class="project-link">View Details</a>
@@ -50,7 +117,7 @@
                         <img src="images/sntc.jpeg" alt="Say NO TO CORRUPTION">
                     </div>
                     <div class="project-content">
-                        <h3>SNTC (Say NO TO CORRUPTION)</h3>
+                        <h3 class = "project-heading" >SNTC</h3>
                         <p>AI-powered compliance monitoring and supplier intelligence</p>
                         <div class="project-links">
                             <a href="https://github.com/JReal10/say_no_to_corruption" target="_blank" class="project-link">View Details</a>
@@ -63,8 +130,8 @@
                         <img src="images/sentiment.jpg" alt="Reddit Stock Sentiment Analyzer">
                     </div>
                     <div class="project-content">
-                        <h3 class = "project-heading">RedditRadar - Stock Sentiment Analyzer</h3>
-                        <p>Analyzes Reddit stock discussions to provide real-time sentiment insights using NLP and transformers.</p>
+                        <h3 class = "project-heading">RedditRadar</h3>
+                        <p>Reddit stock discussions sentiment analyzer for financial institution</p>
                         <div class="project-links">
                             <a href="https://github.com/JReal10/Reddit-Stock-Sentiment-Analyzer" target="_blank" class="project-link">View Details</a>
                         </div>
@@ -77,7 +144,7 @@
                     </div>
                     <div class="project-content">
                         <h3 class = "project-heading">BoroughMatch London</h3>
-                        <p>Recommends London boroughs based on user preferences and socio-economic data, using machine learning and geospatial analysis</p>
+                        <p>AI-powered London Borough Recommender for optimizing resident experience and local service access.</p>
                         <div class="project-links">
                             <a href="https://github.com/JReal10/London-Area-Recommender-System" target="_blank" class="project-link">View Details</a>
                         </div>
@@ -89,7 +156,7 @@
                         <img src="images/sharon.png" alt="E-commerce Platform">
                     </div>
                     <div class="project-content">
-                        <h3 class = "project-heading">Sharon - Salon booking app</h3>
+                        <h3 class = "project-heading">Sharon</h3>
                         <p>A mobile application for salon appointment booking, featuring real-time scheduling and salon dashboards</p>
                         <div class="project-links">
                             <a href="https://github.com/JReal10/Sharon---Salon-booking-app" target="_blank" class="project-link">View Details</a>
@@ -104,7 +171,7 @@
                         <img src="images/parenting.png" alt="E-commerce Platform">
                     </div>
                     <div class="project-content">
-                        <h3 class = "project-heading">ParentLink - parenting app</h3>
+                        <h3 class = "project-heading">ParentLink</h3>
                         <p>parenting app focusing on partner engagement, community building, and expert-backed guidance for all developmental stages.</p>
                         <div class="project-links">
                             <a href="https://www.figma.com/community/file/1322990644569239714" target="_blank" class="project-link">View Details</a>
@@ -116,25 +183,105 @@
             </div>
         </section>
 
-        <div class="divider"></div>
-        <section class="projects-section">
-          <h2>Research.</h2>
-          <div class="research-grid">
-            <div class="project-card" data-category="web">
-              <div class="project-image">
-                <img src="images/culture_llm.png" alt="E-commerce Platform">
-              </div>
-              <div class="project-content">
-                <h3 class = "project-heading">Culturally aligned LLM for low-resource African languages</h3>
-                <p>This research focuses on improving culturally aligned Large Language Models (LLMs) for low-resource African languages. The goal is to develop scalable data collection methods and create benchmarks for better model evaluation.</p>
-                <div class="project-links">
-                  <a href="https://github.com/JReal10/AfricaLLM" target="_blank" class="project-link">View Details</a>
+        <section class="achievements-section fade-in">
+            <h1> <span class = "orange-highlight">RECENT</span> <br>ACHIEVEMENTS</h1>
+            <div class="experience-list">
+                <a class="experience-card" target="_blank" href = "https://www.linkedin.com/feed/update/urn:li:activity:7324704340596715520/">
+                    <div class="company">
+                      2nd Place – Europe’s Largest AI Agent Hackathon
+                        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </div>
+                    <p class="description">Built Table 42, an AI-powered restaurant concierge that converts social media engagement into real bookings by integrating with social platforms and personalizing the discovery-to-reservation journey.</p>
+                    <p class="period">March 2025 - April 2025</p>
+                  </a>
+                
+                <a class="experience-card" target="_blank" href = "https://www.linkedin.com/feed/update/urn:li:activity:7317505996032020484/">
+                    <div class="company">
+                      3rd Place – Portia AI Track, Encode AI London Hackathon
+                        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </div>
+                    <p class="description">Developed SNTC (Say NO TO CORRUPTION), an AI-Powered risk assessment tool. The system identifies corruption risks through political exposure screening, sanctions checks, adverse media analysis, and jurisdictional risk evaluation. </p>
+                    <p class="period">April 2025</p>
+                  </a>
+                
+                <a class="experience-card" target="_blank" href = "https://www.linkedin.com/feed/update/urn:li:activity:7302631978154033152/">
+                    <div class="company">
+                      Winner – HackLBS 2025, London Business School
+                      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </div>
+                    <p class="description">Created Gastronaut, a conversational AI audio bot with automated table management to address manual reservation inefficiencies in Southeast Asian restaurants. The solution modernizes bookings, reduces human error, and enhances customer experience.</p>
+                    <p class="period">March 2025</p>
+                  </a>
+            </div>
+        </section>
+        <section class="research-section fade-in">
+            <h1> <span class = "orange-highlight">RECENT</span> <br>RESEARCH</h1>
+            <div class="experience-list">
+                <a class="experience-card" target="_blank" href = "https://github.com/JReal10/AfricaLLM">
+                    <div class="company">
+                      Low-Resource African Languages and Cultures
+                        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </div>
+                    <p class="description">This research focuses on improving culturally aligned Large Language Models (LLMs) for low-resource African languages. The goal is to develop scalable data collection methods and create benchmarks for better model evaluation.</p>
+                    <p class="period">Jan 2024 - Present</p>
+                  </a>
                 </div>
-              </div>
+        </section>
+        <section class="contact-section">
+          <h1><span class="orange-highlight">LET'S</span><br>CONNECT</h1>
+          <form action="https://formsubmit.co/Jamieogundiran@gmail.com" method="POST" class="contact-form fade-in">
+            <!-- Protect from bots -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">  <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
             </div>
           </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Type your message here…"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
         </section>
-    </main>
+</div>
+</div>
 
     <div id="footer-container"></div>
 
